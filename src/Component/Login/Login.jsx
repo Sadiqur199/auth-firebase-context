@@ -13,9 +13,11 @@ const Login = () => {
     const password = form.password.value;
     console.log(email,password)
     userLogin(email,password)
+    
     .then(result =>{
       const loggedUser = result.user
       console.log(loggedUser)
+      form.reset()
 
     })
     .catch(error=>{
